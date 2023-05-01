@@ -1,4 +1,4 @@
-# Porag's Awesome Books
+# Awesome Books: Ometman & Porag [Pair Programming]
 <a name="readme-top"></a>
 
 <div align="center">
