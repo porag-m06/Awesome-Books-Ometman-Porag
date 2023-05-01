@@ -1,37 +1,34 @@
+// get elements (rename variables)
+const theTitle = document.querySelector('#bk-title');
+const theAuthor = document.querySelector('#bk-author');
+const addBook = document.querySelector('#add-bk');
+const newBook = document.querySelector('#new-bk');
+ 
+// create input array for live input changes
+const userInputs = [theTitle, theAuthor]
 
-const bkTitle = document.querySelector('#bk-title');
-const bkAuthor = document.querySelector('#bk-author');
-const addBk = document.querySelector('#add-bk');
-const newBk = document.querySelector('#new-bk');
- console.log('bkTitle')
-// create input array
-const userInputs = [bkTitle, bkAuthor]
-
- //create empty user data object 
+//create empty user data object 
  let userBkData = { bktitle: '', bkauthor: '' };
 
-addBk.addEventListener('click', () => {
-    e.preventDefault();
-  userBkData = { bktitle: bkTitle.value, bkauthor: bkAuthor.value }; // if not working check parameters
+addBook.addEventListener('click', () => {
+   e.preventDefault();
+  userBkData = { bktitle: theTitle.value, bkauthor: theAuthor.value };
   //setting user input in local storage on submit
   localStorage.setItem('userBkData', JSON.stringify(userBkData));
-});
+ });
 
-// setting user input in local storage onload and change
+// // setting user input in local storage onload and change
 window.addEventListener('load', () => {
-    e.preventDefault();
-    localStorage.setItem('userBkData', JSON.stringify(userBkData));
     // get and assigned the stored data into input elements
-    const getUserBkData = localStorage.getItem(JSON.parse('userBkData'));
-    bkTitle.value = getUserBkData.bktitle;
-    bkAuthor.value = getUserBkData.bkauthor;
-   
+    const getUserBkData = JSON.parse(localStorage.getItem('userBkData'));
+    theTitle.value = getUserBkData.bktitle;
+    theAuthor.value = getUserBkData.bkauthor;
   });
 
+  // get changes in input into local storage
 userInputs.forEach((input) => {
   input.addEventListener('change', () => {
-    userBkData = { bktitle: bkTitle, bkauthor: bkAuthor };
+    userBkData = { bktitle: theTitle.value, bkauthor: theAuthor.value };
     localStorage.setItem('userBkData', JSON.stringify(userBkData));
-    console.log(userBkData)
   });
 });

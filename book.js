@@ -45,22 +45,22 @@ newBk.addEventListener('submit', (e) => {
 // preserve data in local storage
 
 // set data
-const bkTitle = document.querySelector('#bk-title');
-const bkAuthor = document.querySelector('#bk-author');
-const userBkInputs = [bkTitle, bkAuthor];
-// console.log(userBkInputs);
-const userBkData = { bktitle: '', bkauthor: '' };
+// const bkTitle = document.querySelector('#bk-title');
+// const bkAuthor = document.querySelector('#bk-author');
+// const userBkInputs = [bkTitle, bkAuthor];
+// // console.log(userBkInputs);
+// const userBkData = { bktitle: '', bkauthor: '' };
 
 // const setUserBkData = localStorage.setItem('userBkData', JSON.stringify(userBkData));
 
-userBkInputs.forEach((input) => {
-  input.addEventListener(('change', () => {
-    // e.preventDefault();
-    userBkData.bktitle = bkTitle.value;
-    userBkData.bkauthor = bkAuthor.value;
-    localStorage.setItem('userBkData', JSON.stringify(userBkData));
-  }));
-});
+// userBkInputs.forEach((input) => {
+//   input.addEventListener(('change', () => {
+//     // e.preventDefault();
+//     userBkData.bktitle = bkTitle.value;
+//     userBkData.bkauthor = bkAuthor.value;
+//     localStorage.setItem('userBkData', JSON.stringify(userBkData));
+//   }));
+// });
 
 // set data
 // const getUserBkData = localStorage.getItem(JSON.parse(setUserBkData));
