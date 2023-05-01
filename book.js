@@ -1,6 +1,6 @@
-function addBks(title, author) {
-    this.title = title;
-    this.author = author;
+function AddBks(title, author) {
+  this.title = title;
+  this.author = author;
 }
 
 // const showBks = document.querySelector('#show-Bks');
@@ -8,20 +8,20 @@ function addBks(title, author) {
 // const bkAuthor = document.querySelector('#bk-author');
 const newBk = document.querySelector('#new-bk');
 
-// const bksObj = new addBks(bkTitle, bkAuthor);
-//const bksObj = new addBks('bkTitle', 'bkAuthor');
+// const bksObj = new AddBks(bkTitle, bkAuthor);
+// const bksObj = new AddBks('bkTitle', 'bkAuthor');
 // console.log(bksObj.title)
-// const bksObj = new addBks(bkTitle.value, bkAuthor.value)
+// const bksObj = new AddBks(bkTitle.value, bkAuthor.value)
 
 newBk.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const bkTitle = document.querySelector('#bk-title').value;
-    const bkAuthor = document.querySelector('#bk-author').value;
-    const bksObj = new addBks(bkTitle, bkAuthor)
-    //  console.log(bksObj)
-    const addedBk = document.createElement('div');
-    addedBk.classList.add('added-bks');
-    addedBk.innerHTML = `
+  e.preventDefault();
+  const bkTitle = document.querySelector('#bk-title').value;
+  const bkAuthor = document.querySelector('#bk-author').value;
+  const bksObj = new AddBks(bkTitle, bkAuthor);
+  //  console.log(bksObj)
+  const addedBk = document.createElement('div');
+  addedBk.classList.add('added-bks');
+  addedBk.innerHTML = `
             <p class="title">
                 <!--book tile-->
                 ${bksObj.title}
@@ -30,36 +30,32 @@ newBk.addEventListener('submit', (e) => {
                 <!--book author-->
                 ${bksObj.author}
                 </p> 
-                <button id="del-bk">Remove</button>`
-    const showBks = document.querySelector('#show-bks');
-    showBks.appendChild(addedBk);
-})
+                <button id="del-bk">Remove</button>`;
+  const showBks = document.querySelector('#show-bks');
+  showBks.appendChild(addedBk);
+});
 
 // preserve data in local storage
 
-//set data
+// set data
 const bkTitle = document.querySelector('#bk-title');
 const bkAuthor = document.querySelector('#bk-author');
-const userBkInputs = [bkTitle, bkAuthor]
-console.log(userBkInputs)
-const userBkData = {bktitle: '', bkauthor: ''}
+const userBkInputs = [bkTitle, bkAuthor];
+// console.log(userBkInputs);
+const userBkData = { bktitle: '', bkauthor: '' };
 
-const setUserBkData = localStorage.setItem('userBkData', JSON.stringify(userBkData));
+// const setUserBkData = localStorage.setItem('userBkData', JSON.stringify(userBkData));
 
 userBkInputs.forEach((input) => {
-    input.addEventListener(('change', () => {
-       // e.preventDefault();
-        userBkData.bktitle = bkTitle.value;
-        userBkData.bkauthor = bkAuthor.value;
-        localStorage.setItem('userBkData', JSON.stringify(userBkData));
-        
-    }))
+  input.addEventListener(('change', () => {
+    // e.preventDefault();
+    userBkData.bktitle = bkTitle.value;
+    userBkData.bkauthor = bkAuthor.value;
+    localStorage.setItem('userBkData', JSON.stringify(userBkData));
+  }));
 });
 
-//set data
-const getUserBkData = localStorage.getItem(JSON.parse(setUserBkData));
+// set data
+// const getUserBkData = localStorage.getItem(JSON.parse(setUserBkData));
 
 //
-
-
-
