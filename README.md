@@ -99,7 +99,7 @@ Along with dynamic modification of the DOM with Events including all the coding 
 
 > Please follow the link for a live demo.
 
-- [Porag's Awesome Books]()
+- [Awesome Books]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -177,7 +177,7 @@ on the root of your directory of your project.
 ### Deployment
 You can deploy this project using:
 - GitHub Pages for the main branch. A deployed version can be found here:
-https://porag-m06.github.io/...
+https://...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -225,7 +225,7 @@ As a tech enthusiast, your support is always appreciated. If you like this proje
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank [Microvers](https://www.microverse.org/) for this project & project guidelines.
+I would like to thank [Microverse](https://www.microverse.org/) for this project & project guidelines.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
