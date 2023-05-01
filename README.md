@@ -132,14 +132,37 @@ To run the project, execute the following command:
 ### Run tests
 
 To run tests, run the following command:
->For Stylelint run:
-- npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-- npx stylelint "**/*.{css,scss}"   on the root of your directory of your project.
-Fix linter errors on the CLI.
 
->For JSLint run:
-- npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
-- npx eslint .    on the root of your directory of your project.
+**************
+Initial Step:*
+**************
+> mkdir .github/workflows
+> copy the linters.yml file to the directory created above.
+> touch .gitignore if not created already and add node_modules/ to it.
+> initialize npm to create package.json file by running the command: npm i -y      => here i for install & -y for saying yes to all
+
+************************
+For Webhint (optional):*
+************************
+- npm install --save-dev hint@7.x
+- To fix validation errors: npx hint .
+
+**************
+For Stylelint*
+**************
+Run >>> npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+Copy .stylelintrc.json to the root directory of your project.
+
+Run >>> npx stylelint "**/*.{css,scss}"    on the root of your directory of your project.
+Fix linter errors.
+
+*******
+ESLint*
+*******
+Run >>> npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
+Copy .eslintrc.json to the root directory of your project.
+
+Run >>> npx eslint .    on the root of your directory of your project.
 Fix linter errors.
 
 ### Deployment
