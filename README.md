@@ -5,7 +5,7 @@
   <img src="./porag-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
   <h3><b>Porag's Awesome Books</b></h3>
-  <h5>Raw HTML CSS &amp; JS CURD Application that make use of managing data dynamically using Javascript. Along with dynamic modification if the DOM with Events.<h5>
+  <h5>Raw HTML CSS &amp; JS CURD Application that makes use of managing data dynamically using Javascript. Along with dynamic modification of the DOM on different Events.<h5>
 </div>
 
 
