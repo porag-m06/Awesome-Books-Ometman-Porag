@@ -187,7 +187,7 @@ https://porag-m06.github.io/...
 
 - **JS Interactions**
 - **Add Multiple New Pages**
-- **Improve Asthetics & Design**
+- **Improve Aesthetics & Design**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
