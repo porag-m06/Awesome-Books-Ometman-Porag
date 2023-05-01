@@ -139,6 +139,7 @@ Initial Step:
 - touch .gitignore if not created already and add node_modules/ to it.
 - initialize npm to create package.json file by running the command: 
 > npm i -y      
+
 (here i for install & -y for saying yes to all)
 
 ************************
@@ -165,7 +166,7 @@ on the root of your directory of your project.
 ESLint
 *******
 - Run 
->>> npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
+> npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
 - Copy **.eslintrc.json** to the root directory of your project.
 
 - Run 
