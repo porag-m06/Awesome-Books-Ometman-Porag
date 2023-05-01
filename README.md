@@ -135,8 +135,8 @@ To run tests, run the following command:
 Initial Step:
 **************
 - mkdir .github/workflows
-- copy the linters.yml file to the directory created above.
-- touch .gitignore if not created already and add node_modules/ to it.
+- copy the **linters.yml** file to the directory created above.
+- touch .gitignore if not created already and add **node_modules/** to it.
 - initialize npm to create package.json file by running the command: 
 > npm i -y      
 
