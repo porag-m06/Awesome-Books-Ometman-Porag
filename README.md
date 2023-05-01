@@ -186,7 +186,7 @@ https://porag-m06.github.io/...
 > Developed by: 
 
 ### Author1
-- GitHub: [@porag-m06](https://github.com/ometman)
+- GitHub: [@ometman](https://github.com/ometman)
 - Twitter: [@twitterhandle](https://twitter.com/ometman)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ometman/)
 
