@@ -1,10 +1,8 @@
 # Porag's Awesome Books
-Raw HTML CSS &amp; JS CURD Application that make use of managing data dynamically using Javascript.
-
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="./assets/alogo/wdh0.svg" alt="logo" width="140"  height="auto" />
+  <img src="./porag-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
   <h3><b>Porag's Awesome Books</b></h3>
   <h5>Raw HTML CSS &amp; JS CURD Application that make use of managing data dynamically using Javascript. Along with dynamic modification if the DOM with Events.<h5>
@@ -35,7 +33,7 @@ Raw HTML CSS &amp; JS CURD Application that make use of managing data dynamicall
 
 # 📖 [Porag's Awesome Books] <a name="about-project"></a>
 
->This project **["Porag's Awesome Books"]** is a project demonstrates the use of HTML & CSS and managing data dynamically using Javascript. 
+This project **["Porag's Awesome Books"]** is a project demonstrates the use of HTML & CSS and managing data dynamically using Javascript. 
 Along with dynamic modification of the DOM with Events including all the coding best practices. 
 
 >The project includes designs for two different screen sizes.
@@ -134,39 +132,38 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
 **************
-Initial Step:*
+Initial Step:
 **************
-> mkdir .github/workflows
-> copy the linters.yml file to the directory created above.
-> touch .gitignore if not created already and add node_modules/ to it.
-> initialize npm to create package.json file by running the command: npm i -y      => here i for install & -y for saying yes to all
+- mkdir .github/workflows
+- copy the linters.yml file to the directory created above.
+- touch .gitignore if not created already and add node_modules/ to it.
+- initialize npm to create package.json file by running the command: npm i -y      => here i for install & -y for saying yes to all
 
 ************************
-For Webhint (optional):*
+For Webhint (optional):
 ************************
 - npm install --save-dev hint@7.x
 - To fix validation errors: npx hint .
 
 **************
-For Stylelint*
+For Stylelint
 **************
-Run >>> npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-Copy .stylelintrc.json to the root directory of your project.
+- Run >>> npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+- Copy .stylelintrc.json to the root directory of your project.
 
-Run >>> npx stylelint "**/*.{css,scss}"    on the root of your directory of your project.
-Fix linter errors.
+- Run >>> npx stylelint "**/*.{css,scss}" on the root of your directory of your project.
+- Fix linter errors.
 
 *******
 ESLint*
 *******
-Run >>> npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
-Copy .eslintrc.json to the root directory of your project.
+- Run >>> [npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x]
+- Copy .eslintrc.json to the root directory of your project.
 
-Run >>> npx eslint .    on the root of your directory of your project.
-Fix linter errors.
+- Run >>> [npx eslint .]  on the root of your directory of your project.
+- Fix linter errors.
 
 ### Deployment
-
 You can deploy this project using:
 - GitHub Pages for the main branch. A deployed version can be found here:
 https://porag-m06.github.io/...
