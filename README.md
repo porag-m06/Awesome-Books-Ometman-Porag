@@ -31,9 +31,9 @@
 - [📝 License](#license)
 
 
-# 📖 [Porag's Awesome Books] <a name="about-project"></a>
+# 📖 Porag's Awesome Books <a name="about-project"></a>
 
-This project **["Porag's Awesome Books"]** is a project demonstrates the use of HTML & CSS and managing data dynamically using Javascript. 
+This project **Porag's Awesome Books** is a project demonstrates the use of HTML & CSS and managing data dynamically using Javascript. 
 Along with dynamic modification of the DOM with Events including all the coding best practices. 
 
 >The project includes designs for two different screen sizes.
@@ -137,30 +137,40 @@ Initial Step:
 - mkdir .github/workflows
 - copy the linters.yml file to the directory created above.
 - touch .gitignore if not created already and add node_modules/ to it.
-- initialize npm to create package.json file by running the command: npm i -y      => here i for install & -y for saying yes to all
+- initialize npm to create package.json file by running the command: 
+> npm i -y      
+(here i for install & -y for saying yes to all)
 
 ************************
 For Webhint (optional):
 ************************
-- npm install --save-dev hint@7.x
-- To fix validation errors: npx hint .
+- Run
+> npm install --save-dev hint@7.x
+- To fix validation errors run: 
+> npx hint .
 
 **************
 For Stylelint
 **************
-- Run >>> npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-- Copy .stylelintrc.json to the root directory of your project.
+- Run 
+> npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+- Copy **.stylelintrc.json** to the root directory of your project.
 
-- Run >>> npx stylelint "**/*.{css,scss}" on the root of your directory of your project.
+- Run 
+> npx stylelint "**/*.{css,scss}" 
+on the root of your directory of your project.
 - Fix linter errors.
 
 *******
-ESLint*
+ESLint
 *******
-- Run >>> [npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x]
-- Copy .eslintrc.json to the root directory of your project.
+- Run 
+>>> npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
+- Copy **.eslintrc.json** to the root directory of your project.
 
-- Run >>> [npx eslint .]  on the root of your directory of your project.
+- Run 
+> npx eslint .  
+on the root of your directory of your project.
 - Fix linter errors.
 
 ### Deployment
