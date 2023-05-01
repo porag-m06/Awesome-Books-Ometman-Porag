@@ -1,31 +1,68 @@
-//  declare a constructor function for data collection
-function AddBks(title, author) {
-  this.title = title;
-  this.author = author;
-}
-
-const showBks = document.querySelector('#show-Bks');
+/* eslint-disable no-use-before-define */
+const bookCollection = [];
+const showBks = document.querySelector('#show-bks');
 const newBk = document.querySelector('#new-bk');
 
- // create event to add book on submit and set local storage data with input values
+function AddBook(bookTitle, bookAuthor) {
+  bookCollection.push({ title: bookTitle, author: bookAuthor });
+}// AddBook
+
+function ShowAllBooks() {
+  showBks.innerHTML = '';
+
+  for (let i = 0; i < bookCollection.length; i += 1) {
+    const addedBk = document.createElement('div');
+    addedBk.className = 'added-bks';
+    addedBk.id = `${i}`;
+    addedBk.innerHTML = `
+            <p class="title">${bookCollection[i].title}</p>
+            <p class="author">${bookCollection[i].author}</p> 
+            <button id="del-bk">Remove</button>`;
+    showBks.appendChild(addedBk);
+  }
+
+  const removeBtns = document.querySelectorAll('.added-bks');
+  RemoveBook(removeBtns);
+}// ShowAllBooks
+
+function RemoveBook(removeBtns) {
+  removeBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      bookCollection.splice(btn.getAttribute('id'), 1);
+      ShowAllBooks();
+    });
+  });
+}// removeBook
+
 newBk.addEventListener('submit', (e) => {
   e.preventDefault();
-  const bkTitle = document.querySelector('#bk-title').value;
-  const bkAuthor = document.querySelector('#bk-author').value;
-  const bksObj = new AddBks(bkTitle, bkAuthor);
-  //  console.log(bksObj)
-  const addedBk = document.createElement('div');
-  addedBk.classList.add('added-bks');
-  addedBk.innerHTML = `
-            <p class="title">
-                <!--book tile-->
-                ${bksObj.title}
-                </p>
-                <p class="author">
-                <!--book author-->
-                ${bksObj.author}
-                </p> 
-                <button id="del-bk">Remove</button>`;
-  const showBks = document.querySelector('#show-bks');
-  showBks.appendChild(addedBk);
+  const bookTitle = document.querySelector('#bk-title').value;
+  const bookAuthor = document.querySelector('#bk-author').value;
+  AddBook(bookTitle, bookAuthor);
+  ShowAllBooks();
 });
+
+// preserve data in local storage
+
+// set data
+const bkTitle = document.querySelector('#bk-title');
+const bkAuthor = document.querySelector('#bk-author');
+const userBkInputs = [bkTitle, bkAuthor];
+// console.log(userBkInputs);
+const userBkData = { bktitle: '', bkauthor: '' };
+
+// const setUserBkData = localStorage.setItem('userBkData', JSON.stringify(userBkData));
+
+userBkInputs.forEach((input) => {
+  input.addEventListener(('change', () => {
+    // e.preventDefault();
+    userBkData.bktitle = bkTitle.value;
+    userBkData.bkauthor = bkAuthor.value;
+    localStorage.setItem('userBkData', JSON.stringify(userBkData));
+  }));
+});
+
+// set data
+// const getUserBkData = localStorage.getItem(JSON.parse(setUserBkData));
+
+//
