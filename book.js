@@ -1,18 +1,13 @@
+//  declare a constructor function for data collection
 function AddBks(title, author) {
   this.title = title;
   this.author = author;
 }
 
-// const showBks = document.querySelector('#show-Bks');
-// const bkTitle = document.querySelector('#bk-title');
-// const bkAuthor = document.querySelector('#bk-author');
+const showBks = document.querySelector('#show-Bks');
 const newBk = document.querySelector('#new-bk');
 
-// const bksObj = new AddBks(bkTitle, bkAuthor);
-// const bksObj = new AddBks('bkTitle', 'bkAuthor');
-// console.log(bksObj.title)
-// const bksObj = new AddBks(bkTitle.value, bkAuthor.value)
-
+ // create event to add book on submit and set local storage data with input values
 newBk.addEventListener('submit', (e) => {
   e.preventDefault();
   const bkTitle = document.querySelector('#bk-title').value;
@@ -34,28 +29,3 @@ newBk.addEventListener('submit', (e) => {
   const showBks = document.querySelector('#show-bks');
   showBks.appendChild(addedBk);
 });
-
-// preserve data in local storage
-
-// set data
-const bkTitle = document.querySelector('#bk-title');
-const bkAuthor = document.querySelector('#bk-author');
-const userBkInputs = [bkTitle, bkAuthor];
-// console.log(userBkInputs);
-const userBkData = { bktitle: '', bkauthor: '' };
-
-// const setUserBkData = localStorage.setItem('userBkData', JSON.stringify(userBkData));
-
-userBkInputs.forEach((input) => {
-  input.addEventListener(('change', () => {
-    // e.preventDefault();
-    userBkData.bktitle = bkTitle.value;
-    userBkData.bkauthor = bkAuthor.value;
-    localStorage.setItem('userBkData', JSON.stringify(userBkData));
-  }));
-});
-
-// set data
-// const getUserBkData = localStorage.getItem(JSON.parse(setUserBkData));
-
-//
