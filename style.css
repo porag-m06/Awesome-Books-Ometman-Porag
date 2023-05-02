@@ -1,5 +1,171 @@
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;800&display=swap");
+
+@media screen and (min-width: 280px) {
+  html {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  html,
+  body {
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+    color: #000;
+    background: #fff;
+  }
+
+  body {
+    height: 100vh;
+  }
+
+  header {
+    position: relative;
+    margin: 4rem auto 2rem;
+    padding: 0 2rem;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  h1 {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    text-align: center;
+  }
+
+  #show-bks {
+    position: relative;
+    margin: 0 10%;
+    padding: 0 5%;
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(246, 244, 244, 0.739);
+    border: 4px solid #000;
+  }
+
+  .added-bks {
+    position: relative;
+    width: 100%;
+    height: 2.5rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .new-book-title, 
+  .new-book-author {
+    position: relative;
+    margin: 0 0 0 1rem;
+    padding: 0.5rem;
+    width: auto;
+    height: auto;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+  }
+
+  h2 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    text-align: center;
+  }
+
+  .add-books-section {
+    position: relative;
+    margin: 5% 10%;
+    padding: 0 5%;
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+    background: #fff;
+  }
+
+  /* form styling */
+
+  #new-bk {
+    position: relative;
+    width: 95%;
+    height: auto;
+    margin: 0;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .title-input {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2rem;
+  }
+
+  #bk-title,
+  #bk-author {
+    position: relative;
+    width: 100%;
+    height: 2rem;
+    padding: 0;
+    margin: 0;
+    color: #000;
+    background: #fff;
+  }
+
+  .add-book-btn {
+    position: relative;
+    align-self: end;
+    margin-right: 0;
+    padding: 0.5rem;
+    width: 30%;
+    height: auto;
+  }
+
+  .order0 {
+    order: 0;
+  }
+
+  .order1 {
+    order: 1;
+  }
+
+  .order2 {
+    order: 2;
+  }
 }

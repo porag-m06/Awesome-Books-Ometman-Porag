@@ -16,8 +16,8 @@ function ShowAllBooks() {
     addedBk.className = 'added-bks';
     addedBk.id = `${i}`;
     addedBk.innerHTML = `
-            <p class="title">${bookCollection[i].title}</p>
-            <p class="author">${bookCollection[i].author}</p> 
+            <p class="new-book-title">${bookCollection[i].title}</p>
+            <p class="new-book-author">${bookCollection[i].author}</p> 
             <button id="del-bk">Remove</button>`;
     showBks.appendChild(addedBk);
   }
