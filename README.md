@@ -1,11 +1,11 @@
-# Porag's Awesome Books
+# Awesome Books: Ometman & Porag [Pair Programming]
 <a name="readme-top"></a>
 
 <div align="center">
   <img src="./porag-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
-  <h3><b>Porag's Awesome Books</b></h3>
-  <h5>Raw HTML CSS &amp; JS CURD Application that make use of managing data dynamically using Javascript. Along with dynamic modification if the DOM with Events.<h5>
+  <h3><b>Awesome Books: Ometman & Porag [Pair Programming]</b></h3>
+  <h5>Raw HTML CSS &amp; JS CURD Application that makes use of managing data dynamically using Javascript. Along with dynamic modification of the DOM on different Events.<h5>
 </div>
 
 
@@ -31,9 +31,9 @@
 - [📝 License](#license)
 
 
-# 📖 Porag's Awesome Books <a name="about-project"></a>
+# 📖 Awesome Books: Ometman & Porag <a name="about-project"></a>
 
-This project **Porag's Awesome Books** is a project demonstrates the use of HTML & CSS and managing data dynamically using Javascript. 
+This project **Awesome Books** is a project demonstrates the use of HTML & CSS and managing data dynamically using Javascript. 
 Along with dynamic modification of the DOM with Events including all the coding best practices. 
 
 >The project includes designs for two different screen sizes.
@@ -99,7 +99,7 @@ Along with dynamic modification of the DOM with Events including all the coding 
 
 > Please follow the link for a live demo.
 
-- [Porag's Awesome Books]()
+- [Awesome Books]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -177,7 +177,7 @@ on the root of your directory of your project.
 ### Deployment
 You can deploy this project using:
 - GitHub Pages for the main branch. A deployed version can be found here:
-https://porag-m06.github.io/...
+https://...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,6 +185,13 @@ https://porag-m06.github.io/...
 
 > Developed by: 
 
+### Author1
+- GitHub: [@ometman](https://github.com/ometman)
+- Twitter: [@twitterhandle](https://twitter.com/ometman)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ometman/)
+
+
+### Author2
 - GitHub: [@porag-m06](https://github.com/porag-m06)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/muhammad-porag-nsu-cse/)
@@ -218,7 +225,7 @@ As a tech enthusiast, your support is always appreciated. If you like this proje
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank [Microvers](https://www.microverse.org/) for this project & project guidelines.
+I would like to thank [Microverse](https://www.microverse.org/) for this project & project guidelines.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
