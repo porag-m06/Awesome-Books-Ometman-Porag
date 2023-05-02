@@ -1,10 +1,11 @@
 /* eslint-disable no-use-before-define */
-const bookCollection = [];
+const bookCollection = JSON.parse(localStorage.getItem('Books')) || [];
 const showBks = document.querySelector('#show-bks');
 const newBk = document.querySelector('#new-bk');
 
 function AddBook(bookTitle, bookAuthor) {
   bookCollection.push({ title: bookTitle, author: bookAuthor });
+  localStorage.setItem('Books', JSON.stringify(bookCollection));
 }// AddBook
 
 function ShowAllBooks() {
@@ -22,17 +23,22 @@ function ShowAllBooks() {
   }
 
   const removeBtns = document.querySelectorAll('.added-bks');
-  RemoveBook(removeBtns);
+  removeBook(removeBtns);
 }// ShowAllBooks
 
-function RemoveBook(removeBtns) {
+function removeBook(removeBtns) {
   removeBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       bookCollection.splice(btn.getAttribute('id'), 1);
+      localStorage.setItem('Books', JSON.stringify(bookCollection));
       ShowAllBooks();
     });
   });
 }// removeBook
+
+if (bookCollection.length > 0) {
+  ShowAllBooks();
+}
 
 newBk.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -40,29 +46,5 @@ newBk.addEventListener('submit', (e) => {
   const bookAuthor = document.querySelector('#bk-author').value;
   AddBook(bookTitle, bookAuthor);
   ShowAllBooks();
+  newBk.reset();
 });
-
-// preserve data in local storage
-
-// set data
-// const bkTitle = document.querySelector('#bk-title');
-// const bkAuthor = document.querySelector('#bk-author');
-// const userBkInputs = [bkTitle, bkAuthor];
-// // console.log(userBkInputs);
-// const userBkData = { bktitle: '', bkauthor: '' };
-
-// const setUserBkData = localStorage.setItem('userBkData', JSON.stringify(userBkData));
-
-// userBkInputs.forEach((input) => {
-//   input.addEventListener(('change', () => {
-//     // e.preventDefault();
-//     userBkData.bktitle = bkTitle.value;
-//     userBkData.bkauthor = bkAuthor.value;
-//     localStorage.setItem('userBkData', JSON.stringify(userBkData));
-//   }));
-// });
-
-// set data
-// const getUserBkData = localStorage.getItem(JSON.parse(setUserBkData));
-
-//
