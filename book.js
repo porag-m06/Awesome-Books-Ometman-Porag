@@ -1,40 +1,52 @@
 /* eslint-disable no-use-before-define */
-const bookCollection = JSON.parse(localStorage.getItem('Books')) || [];
-const showBks = document.querySelector('#show-bks');
-const newBk = document.querySelector('#new-bk');
 
-function AddBook(bookTitle, bookAuthor) {
-  bookCollection.push({ title: bookTitle, author: bookAuthor });
-  localStorage.setItem('Books', JSON.stringify(bookCollection));
-}// AddBook
+showBks = document.querySelector('#show-bks');
+newBk = document.querySelector('#new-bk');
 
-function ShowAllBooks() {
-  showBks.innerHTML = '';
+class booksClass {
+  bookCollection = JSON.parse(localStorage.getItem('Books')) || [];
 
-  for (let i = 0; i < bookCollection.length; i += 1) {
-    const addedBk = document.createElement('div');
-    addedBk.className = 'added-bks';
-    addedBk.id = `${i}`;
-    addedBk.innerHTML = `
-            <p class="new-book-title">${bookCollection[i].title}</p>
-            <p class="new-book-author">${bookCollection[i].author}</p> 
-            <button id="del-bk">Remove</button>`;
-    showBks.appendChild(addedBk);
+  constructor(bookTitle, bookAuthor) {
+      this.title = bookTitle,
+          this.author = bookAuthor
   }
 
-  const removeBtns = document.querySelectorAll('.added-bks');
-  removeBook(removeBtns);
-}// ShowAllBooks
+  AddBook() {
+    let title = this.title;
+    let author = this.author;
+      this.bookCollection.push({title, author}) ;
+      localStorage.setItem('Books', JSON.stringify(this.bookCollection));
+  }
 
-function removeBook(removeBtns) {
-  removeBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      bookCollection.splice(btn.getAttribute('id'), 1);
-      localStorage.setItem('Books', JSON.stringify(bookCollection));
-      ShowAllBooks();
-    });
-  });
-}// removeBook
+  ShowAllBooks() {
+      showBks.innerHTML = '';
+console.log(this.bookCollection)
+      for (let i = 0; i < this.bookCollection.length; i += 1) {
+          const addedBk = document.createElement('div');
+          addedBk.className = 'added-bks';
+          addedBk.id = `${i}`;
+          addedBk.innerHTML = `
+              <p class="new-book-title">${this.bookCollection[i].title}</p>
+              <p class="new-book-author">${this.bookCollection[i].author}</p> 
+              <button id="del-bk">Remove</button>`;
+          showBks.appendChild(addedBk);
+      }
+
+      const removeBtns = document.querySelectorAll('.added-bks');
+      this.removeBook(removeBtns);
+  }// ShowAllBooks
+
+  removeBook(removeBtns) {
+      removeBtns.forEach((btn) => {
+          btn.addEventListener('click', () => {
+              this.bookCollection.splice(btn.getAttribute('id'), 1);
+              localStorage.setItem('Books', JSON.stringify(this.bookCollection));
+              this.ShowAllBooks();
+          });
+      });
+  }// removeBook
+}
+
 
 if (bookCollection.length > 0) {
   ShowAllBooks();
@@ -44,7 +56,8 @@ newBk.addEventListener('submit', (e) => {
   e.preventDefault();
   const bookTitle = document.querySelector('#bk-title').value;
   const bookAuthor = document.querySelector('#bk-author').value;
-  AddBook(bookTitle, bookAuthor);
-  ShowAllBooks();
+  const awesomeBooks = new booksClass(bookTitle, bookAuthor);
+  awesomeBooks.AddBook();
+  awesomeBooks.ShowAllBooks();
   newBk.reset();
 });
