@@ -4,26 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Awesome Books</title>
   </head>
   <body>
-    <h1 class="heading-title">Awesome Books</h1>
+    <header>
+      <h1 class="heading-title">All Awesome Books</h1>
+    </header>
     <section id="show-bks">
       
     </section>
-    <hr class="first-div" />
-    <section class="add-bks">
+    <section class="add-books-section">
+      <h2 class="heading-title">Add a new book:</h2>
       <form id="new-bk">
-        <p>
-          <input id="bk-title" type="text" placeholder="Title" required />
+        <p class="title-input order0">
+          <input id="bk-title" type="text" name="title" placeholder="Title" required />
         </p>
-        <p>
-          <input id="bk-author" type="text" placeholder="Author" required />
+        <p class="title-input order1">
+          <input id="bk-author" type="text" name="author" placeholder="Author" required />
         </p>
-        <button id="add-bk" type="submit">add</button>
+        <button id="add-bk" class="add-book-btn order2" type="submit">add</button>
     </form>
+    </section>
     <script src="./book.js"></script>
-    <script src="./localstorage.js"></script>
   </body>
 </html>
