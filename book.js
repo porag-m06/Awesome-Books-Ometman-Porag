@@ -21,6 +21,7 @@ class BooksClass {
     for (let i = 0; i < this.bookCollection.length; i += 1) {
       const addedBk = document.createElement('div');
       addedBk.className = 'added-bks';
+      addedBk.style.backgroundColor = '#d3d3d3';
       addedBk.id = `${i}`;
       addedBk.innerHTML = `
               <p class="new-book-title">${this.bookCollection[i].title}</p>
