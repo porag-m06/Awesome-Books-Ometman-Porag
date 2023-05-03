@@ -1,35 +1,101 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;800&display=swap");
 
-html {
+body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
-}
-
-html,
-body {
   position: relative;
   width: auto;
   margin: 0 auto;
+  height: 100vh;
   padding: 0;
   color: #000;
   background: #fff;
+  overflow: hidden;
 }
 
-body {
-  height: 100vh;
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
   position: relative;
-  margin: 4rem auto 2rem;
-  padding: 0 2rem;
+  margin: 5% auto 2%;
+  padding: 2% 5%;
   width: auto;
   height: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   gap: 2rem;
+  background: #fff;
+}
+
+.logo {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  color: #000;
+  background: #fff;
+}
+
+ul.menu {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  background: #fff;
+  color: #000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+ul.menu li {
+  width: auto;
+
+  /* margin-right: 0.5rem; */
+}
+
+ul.menu li a {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #000;
+  background-color: #fff;
+}
+
+ul.menu li a:hover {
+  color: #fff;
+  background: blue;
+  border: 1px solid blue;
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+ul.menu li a:enabled {
+  color: blue;
+  background: white;
+  border: 1px solid blue;
+  border-radius: 6px;
+  padding: 0.5rem;
 }
 
 h1 {
@@ -206,4 +272,44 @@ h2 {
 
 .order2 {
   order: 2;
+}
+
+.contact-section {
+  position: relative;
+  margin: 0 3%;
+  padding: 2%;
+  width: auto;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer {
+  position: relative;
+  margin: 5% 3% 0;
+  padding: 2% 5%;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+
+.footer-info {
+  position: relative;
+  margin: 0 2%;
+  padding: 2% 0.5%;
+  height: auto;
+  width: auto;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #000;
+  background: #fff;
 }
