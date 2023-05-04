@@ -2,10 +2,9 @@
 const newBk = document.querySelector('#new-bk');
 const currentDate = document.querySelector('.current-date');
 
-// CURRENT DATE 
+// CURRENT DATE
 const date = new Date();
-currentDate.append(document.createElement('p').innerHTML = `${date}`)
-
+currentDate.append(document.createElement('p').innerHTML = `${date}`);
 
 class BooksClass {
   constructor(bookTitle, bookAuthor) {
@@ -70,47 +69,45 @@ newBk.addEventListener('submit', (e) => {
   newBk.reset();
 });
 
-//NAVIGATION
+// NAVIGATION
 const menuItems = document.querySelectorAll('.menu-item');
 const collection = document.querySelector('.collection');
 const add = document.querySelector('.add-books-section');
 const info = document.querySelector('.contact-section');
 hideAll();
-collection.style.display = "block";
+collection.style.display = 'block';
 
 function hideAll() {
-  collection.style.display = "none";
-  add.style.display = "none";
-  info.style.display = "none";
+  collection.style.display = 'none';
+  add.style.display = 'none';
+  info.style.display = 'none';
 }
 
-menuItems.forEach(item =>{
-    item.addEventListener('click', () => {
-      let key = item.getAttribute('value');
-      console.log(key, typeof(key));
+menuItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    const key = item.getAttribute('value');
 
     switch (key) {
       case 'list':
-        {
-          hideAll();
-          collection.style.display = "block"; break;
-        }
+      {
+        hideAll();
+        collection.style.display = 'block'; break;
+      }
 
       case 'add':
-        {
-          hideAll();
-          add.style.display = "block"; break;
-        }
+      {
+        hideAll();
+        add.style.display = 'block'; break;
+      }
 
       case 'info':
-        {
-          hideAll();
-          info.style.display = "block"; break;
-        }
+      {
+        hideAll();
+        info.style.display = 'block'; break;
+      }
 
-      default: collection.style.display = "block";
+      default: collection.style.display = 'block';
         break;
     }
-  })
-}) 
-
+  });
+});
